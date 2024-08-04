@@ -41,7 +41,7 @@ def get_weather():
   # if res is None:
   #   return None
   # weather = res['data']['list'][0]
-  return '未获取'
+  return {"defaultkey":"未获取"}
 
 # 获取当前日期为星期几
 def get_week_day():
