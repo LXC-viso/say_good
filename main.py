@@ -106,7 +106,8 @@ data = {
     "color": get_random_color()
   },
   "weather": {
-    "value": weather['weather'],
+    # "value": weather['weather'],
+    "value": "未知天气",
     "color": get_random_color()
   },
   "humidity": {
