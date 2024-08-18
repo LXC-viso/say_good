@@ -6,6 +6,20 @@ import requests
 import os
 import random
 
+word_list =[ "今天流的汗，都是明天减的脂。",
+"不为减肥找借口，只为健康找方法。",
+"每一滴汗水，都是在雕刻更好的自己。",
+"管住嘴，迈开腿，离梦想的身材更近一步。",
+"坚持是一种信仰，瘦下来是一种信念。",
+"少吃一口，收获更多自信。",
+"现在不努力减肥，将来就要努力看医生。",
+"汗水是燃烧脂肪的证据。",
+"美好的身材始于自律。",
+"每一次放弃高热量食物，都是离目标更近一步。",
+            "只要你勇敢追求，梦想就会成真。",
+
+]
+
 nowtime = datetime.utcnow() + timedelta(hours=8)  # 东八区时间
 today = datetime.strptime(str(nowtime.date()), "%Y-%m-%d") #今天的日期
 
@@ -107,7 +121,8 @@ data = {
   },
   "weather": {
     # "value": weather['weather'],
-    "value": "未知天气",
+    # "value": "未知天气",
+    "value": random.choice(word_list),
     "color": get_random_color()
   },
   "humidity": {
