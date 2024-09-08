@@ -20,6 +20,9 @@ word_list =[ "今天流的汗，都是明天减的脂。",
 
 ]
 
+with open('word_list_file.txt', 'r') as f:
+  word_list += f.readlines()
+
 nowtime = datetime.utcnow() + timedelta(hours=8)  # 东八区时间
 today = datetime.strptime(str(nowtime.date()), "%Y-%m-%d") #今天的日期
 
