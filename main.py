@@ -125,7 +125,7 @@ data = {
   "weather": {
     # "value": weather['weather'],
     # "value": "未知天气",
-    "value": str(len(word_list)) + " " + random.choice(word_list),
+    "value": random.choice(word_list),
     "color": get_random_color()
   },
   "humidity": {
