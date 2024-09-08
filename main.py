@@ -22,7 +22,7 @@ word_list =[ "今天流的汗，都是明天减的脂。",
 
 with open('word_list_file.txt', 'r') as f:
   word_list += f.readlines()
-
+print('word_list size:', len(word_list))
 nowtime = datetime.utcnow() + timedelta(hours=8)  # 东八区时间
 today = datetime.strptime(str(nowtime.date()), "%Y-%m-%d") #今天的日期
 
@@ -125,7 +125,7 @@ data = {
   "weather": {
     # "value": weather['weather'],
     # "value": "未知天气",
-    "value": random.choice(word_list),
+    "value": str(len(word_list)) + " " + random.choice(word_list),
     "color": get_random_color()
   },
   "humidity": {
